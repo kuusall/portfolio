@@ -64,6 +64,7 @@ export const siteConfig: SiteConfig = {
       link: 'https://github.com/kuusall',
     },
   ],
+  blogPosts:[],
   experience: [
     {
       id: '1',
