@@ -3,6 +3,9 @@ import { createClient } from '@supabase/supabase-js';
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
 const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
 
+console.log('DEBUG: URL exists?', !!supabaseUrl);
+console.log('DEBUG: Key exists?', !!supabaseAnonKey);
+
 let supabaseClient: any = null;
 
 if (supabaseUrl && supabaseAnonKey && supabaseUrl.startsWith('http')) {
