@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { SiteConfig } from '@/core/entities/SiteConfig';
 import ThemeToggle from '@/components/ui/ThemeToggle';
 
@@ -10,6 +10,23 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({ config }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isOpen]);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-white/80 dark:bg-[#0b0f19]/80 border-b border-gray-200 dark:border-gray-800/50 transition-colors duration-300">
@@ -54,7 +71,10 @@ const Navbar: React.FC<NavbarProps> = ({ config }) => {
       </div>
 
       {/* Mobile Menu Overlay */}
-      <div className={`absolute top-20 left-0 right-0 bg-white dark:bg-[#0b0f19] border-b border-gray-200 dark:border-gray-800 transition-all duration-300 ease-in-out overflow-hidden ${isOpen ? 'max-h-screen opacity-100 py-6' : 'max-h-0 opacity-0 py-0'}`}>
+      <div
+        ref={menuRef}
+        className={`absolute top-20 left-0 right-0 bg-white dark:bg-[#0b0f19] border-b border-gray-200 dark:border-gray-800 transition-all duration-300 ease-in-out overflow-hidden ${isOpen ? 'max-h-screen opacity-100 py-6' : 'max-h-0 opacity-0 py-0'}`}
+      >
         <nav className="flex flex-col items-center gap-6 font-mono text-sm text-gray-500 dark:text-gray-400 px-6">
           {config.navLinks.map((link) => (
             <a

@@ -28,6 +28,16 @@ export interface Award {
   subtitle: string;
 }
 
+export interface BlogPost {
+  id: string;
+  title: string;
+  slug: string;
+  excerpt: string;
+  content: string;
+  category: string;
+  published_at: string;
+}
+
 export interface SiteConfig {
   name: string;
   title: string;
@@ -48,6 +58,7 @@ export interface SiteConfig {
   projects: Project[];
   experience: ExperienceItem[];
   awards: Award[];
+  blogPosts: BlogPost[];
   contact: {
     title: string;
     subtitle: string;

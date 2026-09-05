@@ -6,17 +6,21 @@ import About from '@/components/sections/About';
 import Work from '@/components/sections/Work';
 import Experience from '@/components/sections/Experience';
 import Awards from '@/components/sections/Awards';
+import Blog from '@/components/sections/Blog';
 import Contact from '@/components/sections/Contact';
 import { siteConfig } from '@/lib/constants';
 import { ProjectService } from '@/services/projectService';
 import { ExperienceService, AwardService } from '@/services/experienceService';
+import { BlogService } from '@/services/blogService';
 
+export const dynamic = 'force-dynamic';
 export default async function Home() {
   // Fetch data in parallel on the server
-  const [projects, experience, awards] = await Promise.all([
+  const [projects, experience, awards, blogPosts] = await Promise.all([
     ProjectService.getAllProjects(),
     ExperienceService.getAllExperience(),
     AwardService.getAllAwards(),
+    BlogService.getAllPosts(6), // Optimized: Only fetch the 6 most recent posts
   ]);
 
   // Merge dynamic data with static configuration
@@ -25,6 +29,7 @@ export default async function Home() {
     projects,
     experience,
     awards,
+    blogPosts,
   };
 
   return (
@@ -33,6 +38,7 @@ export default async function Home() {
       <Hero config={config} />
       <About config={config} />
       <Work config={config} />
+      <Blog config={config} />
       <Experience config={config} />
       <Awards config={config} />
       <Contact config={config} />
