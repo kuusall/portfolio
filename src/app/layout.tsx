@@ -9,7 +9,7 @@ const jetbrainsMono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-mon
 
 export const metadata = {
   title: 'Kushal Adhikari — Portfolio',
-  description: 'AI/ML Engineer & Product Builder',
+  description: 'Computer Engineer & Product Builder',
 };
 
 export default function RootLayout({
@@ -21,8 +21,8 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} font-sans bg-white dark:bg-[#0b0f19] text-gray-900 dark:text-gray-100 antialiased transition-colors duration-300`}>
         {children}
-        <Analytics />
       </body>
+      <Analytics />
     </html>
   );
 }

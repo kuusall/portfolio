@@ -13,7 +13,7 @@ const Hero: React.FC<HeroProps> = ({ config }) => {
     >
       <div className="max-w-7xl mx-auto px-6 w-full relative z-10">
         <p className="font-mono text-xs uppercase tracking-widest text-cyan-600 dark:text-cyan-400 mb-6">
-          // AI/ML ENGINEER & PRODUCT BUILDER
+          // COMPUTER ENGINEER & PRODUCT BUILDER
         </p>
         <h1 className="text-5xl sm:text-7xl md:text-9xl font-light tracking-tighter uppercase mb-8 text-gray-900 dark:text-white">
           {config.title}

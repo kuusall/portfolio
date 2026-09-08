@@ -3,7 +3,7 @@ import { SiteConfig } from '@/core/entities/SiteConfig';
 export const siteConfig: SiteConfig = {
   name: 'KUSHAL ADHIKARI',
   title: 'Kushal Adhikari',
-  description: 'AI/ML Engineer, Software Developer, and Product Builder specializing in NLP, adaptive learning, and digital health innovations.',
+  description: 'Computer Engineer, Software Developer and Product Builder working on AI/ML for adaptive learning and digital health innovations.',
   ctaText: 'View work',
   ctaLink: '#work',
   secondaryCtaText: 'Get in touch',
@@ -18,7 +18,7 @@ export const siteConfig: SiteConfig = {
   ],
   about: {
     title: 'Crafting Intelligent & Purpose-Driven Products',
-    bio: 'Computer Engineering graduate specializing in AI/ML, NLP, and product development. Co-founder of award-winning solutions including MindBridge, an inclusive learning platform for dyslexic children, MindGuard, a digital mental health platform, and NepText, a Nepali language assistance extension. Winner of ICT Awards 2025 Rising Star Innovation and multiple national hackathons.',
+    bio: 'Computer Engineering graduate specializing in AI/ML and product development. Co-founded award-winning solutions including MindBridge, an inclusive learning platform for dyslexic children and MindGuard, a digital mental health platform. Winner of ICT Awards 2025 Rising Star Innovation and multiple national hackathons.',
     skills: [
       {
         name: 'Languages',
@@ -30,7 +30,7 @@ export const siteConfig: SiteConfig = {
       },
       {
         name: 'Development',
-        skills: ['Flutter', 'Firebase', 'Supabase', 'Hive', 'PostgreSQL', 'REST APIs'],
+        skills: ['Flutter', 'Firebase', 'Supabase', 'PostgreSQL', 'REST APIs'],
       },
       {
         name: 'Tools & DevOps',
