@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import Link from 'next/link';
+import ThemeToggle from '@/components/ui/ThemeToggle';
 
 export const revalidate = 60; 
 // Optimization: Pre-render all blog posts at build time for instant loading
@@ -23,16 +24,21 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
   }
 
   return (
-    <article className="min-h-screen bg-white dark:bg-[#0b0f19] transition-colors duration-300">
-      {/* Navigation Header */}
-      <div className="max-w-3xl mx-auto px-6 pt-32 pb-12">
-        <Link
-          href="/#blog"
-          className="font-mono text-xs text-cyan-600 dark:text-cyan-400 hover:text-gray-900 dark:hover:text-white transition-colors inline-flex items-center gap-1 mb-8"
-        >
-          ← Back to Blog
-        </Link>
+    <div className="min-h-screen bg-white dark:bg-[#0b0f19] transition-colors duration-300">
+      {/* Minimal Header for Blog Posts */}
+      <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-white/80 dark:bg-[#0b0f19]/80 border-b border-gray-200 dark:border-gray-800/50 transition-colors duration-300">
+        <div className="max-w-3xl mx-auto px-6 h-16 flex items-center justify-between">
+          <Link
+            href="/#blog"
+            className="font-mono text-xs text-cyan-600 dark:text-cyan-400 hover:text-gray-900 dark:hover:text-white transition-colors inline-flex items-center gap-1"
+          >
+            ← Back to Blog
+          </Link>
+          <ThemeToggle />
+        </div>
+      </header>
 
+      <article className="max-w-3xl mx-auto px-6 pt-32 pb-12">
         <header className="mb-12">
           <div className="flex items-center gap-3 mb-4">
             <span className="text-[10px] font-mono uppercase px-2 py-1 bg-cyan-100 dark:bg-cyan-900/30 text-cyan-600 dark:text-cyan-400 rounded">
@@ -67,7 +73,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
             {post.content}
           </ReactMarkdown>
         </div>
-      </div>
-    </article>
+      </article>
+    </div>
   );
 }

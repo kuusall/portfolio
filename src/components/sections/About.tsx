@@ -43,6 +43,31 @@ const About: React.FC<AboutProps> = ({ config }) => {
             ))}
           </div>
         </div>
+
+        <div className="space-y-6 pt-6 border-t border-gray-200 dark:border-gray-800/60 mt-12">
+          <div className="font-mono text-xs text-cyan-600 dark:text-cyan-400 tracking-widest uppercase mb-4">
+            // GAMES
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <a
+              href="/typer"
+              className="p-4 rounded-lg bg-white dark:bg-[#0b0f19]/60 border border-gray-200 dark:border-gray-800/60 hover:border-cyan-500 dark:hover:border-cyan-400 transition-all duration-300 group"
+            >
+              <div className="flex items-center justify-between">
+                <div>
+                  <h3 className="text-xs font-mono uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-1 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">
+                    Typer
+                  </h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-300">Test your typing speed with my blog posts</p>
+                </div>
+                <div className="text-cyan-500 group-hover:translate-x-1 transition-transform">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+
       </div>
     </section>
   );
