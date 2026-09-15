@@ -3,6 +3,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { SiteConfig } from '@/core/entities/SiteConfig';
 import ThemeToggle from '@/components/ui/ThemeToggle';
+import Image from 'next/image';
+import profileImage from '@/assets/icon.png';
 
 interface NavbarProps {
   config: SiteConfig;
@@ -32,10 +34,17 @@ const Navbar: React.FC<NavbarProps> = ({ config }) => {
     <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-white/80 dark:bg-[#0b0f19]/80 border-b border-gray-200 dark:border-gray-800/50 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         <a
-          className="font-mono text-sm font-bold tracking-wider text-gray-900 dark:text-white"
+          className="flex items-center gap-3 font-mono text-sm font-bold tracking-wider text-gray-900 dark:text-white"
           href="#home"
         >
-          {config.name}
+          <Image
+            src={profileImage}
+            alt={config.name}
+            width={56}
+            height ={56}
+            className="rounded-full object-cover"
+          />
+          <span>{config.name}</span>
         </a>
 
         <nav className="hidden sm:flex items-center gap-6 sm:gap-8 font-mono text-xs text-gray-500 dark:text-gray-400">

@@ -59,7 +59,7 @@ const About: React.FC<AboutProps> = ({ config }) => {
                       className="text-xs font-mono uppercase text-cyan-700 dark:text-cyan-300 tracking-wider mb-1 group-hover:text-cyan-700 dark:group-hover:text-cyan-1300 transition-colors">
                     Typer
                   </h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-300">Test your typing speed with my blog posts</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-300">My own Monkeytype, Just for fun!!</p>
                 </div>
                 <div className="text-cyan-500 group-hover:translate-x-1 transition-transform">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6"/></svg>
