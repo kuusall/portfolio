@@ -22,7 +22,7 @@ export const siteConfig: SiteConfig = {
     skills: [
       {
         name: 'Languages',
-        skills: ['Python', 'Rust', 'Dart', 'JavaScript', 'C/C++', 'SQL'],
+        skills: ['Python', 'Rust', 'Dart', 'JavaScript', 'TypeScript', 'TailwindCSS', 'C/C++', 'SQL'],
       },
       {
         name: 'ML / NLP',

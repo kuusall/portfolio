@@ -55,7 +55,8 @@ const About: React.FC<AboutProps> = ({ config }) => {
             >
               <div className="flex items-center justify-between">
                 <div>
-                  <h3 className="text-xs font-mono uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-1 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">
+                  <h3 
+                      className="text-xs font-mono uppercase text-cyan-700 dark:text-cyan-300 tracking-wider mb-1 group-hover:text-cyan-700 dark:group-hover:text-cyan-1300 transition-colors">
                     Typer
                   </h3>
                   <p className="text-sm text-gray-600 dark:text-gray-300">Test your typing speed with my blog posts</p>
