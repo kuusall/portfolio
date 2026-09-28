@@ -3,7 +3,7 @@ import { SiteConfig } from '@/core/entities/SiteConfig';
 export const siteConfig: SiteConfig = {
   name: 'KUSHAL ADHIKARI',
   title: 'Kushal Adhikari',
-  description: 'Computer Engineer, Software Developer and Product Builder working on AI/ML for adaptive learning and digital health innovations.',
+  description: 'Computer Engineer from Nepal, learning AI/ML for adaptive learning and digital health, Building Mobile Applications and Tech Products.',
   ctaText: 'View work',
   ctaLink: '#work',
   secondaryCtaText: 'Get in touch',
@@ -17,12 +17,12 @@ export const siteConfig: SiteConfig = {
     { label: 'CONTACT', href: '#contact' },
   ],
   about: {
-    title: 'Crafting Intelligent & Purpose-Driven Products',
-    bio: 'Computer Engineering graduate specializing in AI/ML and product development. Co-founded award-winning solutions including MindBridge, an inclusive learning platform for dyslexic children and MindGuard, a digital mental health platform. Winner of ICT Awards 2025 Rising Star Innovation and multiple national hackathons.',
+    title: 'Working on AI, Purpose-Driven Products and Business Deveopment in Tech',
+    bio: 'Hello 👋, I am Kushal Adhikari a Computer Engineering Graduate specializing in AI/ML and product development. I am currently working on developing a mobile application for sports mainly Futsal called Maidan. I love learing and creating applications and am trying to develop business around it. I have been part of an award-winning solution recognized as star innovation called MindBridge, it was an inclusive learning app for dyslexic children and another app MindGuard also awarded for open innovation in digital health, it was a mental health platform for PTSD patients. Proud winner of ICT Awards 2025 Rising Star Innovation alongside various wins on multiple national hackathons. I am working on my research papers on Meadical Image and AI applications on Medical fields. I am a open source advocate and love using linux and have a passion for Science and Maths. Thank you for visiting my website.',
     skills: [
       {
         name: 'Languages',
-        skills: ['Python', 'Rust', 'Dart', 'JavaScript', 'TypeScript', 'TailwindCSS', 'C/C++', 'SQL'],
+        skills: ['Python', 'Rust', 'JavaScript', 'TypeScript', 'TailwindCSS', 'C/C++', 'SQL'],
       },
       {
         name: 'ML / NLP',
@@ -30,11 +30,11 @@ export const siteConfig: SiteConfig = {
       },
       {
         name: 'Development',
-        skills: ['Flutter', 'Firebase', 'Supabase', 'PostgreSQL', 'REST APIs'],
+        skills: ['React Native', 'Firebase', 'Supabase', 'PostgreSQL', 'REST APIs'],
       },
       {
         name: 'Tools & DevOps',
-        skills: ['Docker', 'Git', 'Linux', 'GitHub Actions'],
+        skills: ['Docker', 'Git', 'Linux', 'GitHub Actions','Nvim'],
       },
     ],
   },
@@ -125,7 +125,7 @@ export const siteConfig: SiteConfig = {
   ],
   contact: {
     title: "LET'S TALK.",
-    subtitle: 'Have a project in mind or interested in AI collaboration? My inbox is always open.',
+    subtitle: 'Have a project in mind, interested in my previous work or want to work for an AI collaboration? My inbox is always open.',
     email: 'kushaladk18@gmail.com',
     phone: '+977-9748307735',
   },
@@ -134,6 +134,9 @@ export const siteConfig: SiteConfig = {
     socials: [
       { platform: 'GitHub', url: 'https://github.com/kuusall' },
       { platform: 'LinkedIn', url: 'https://www.linkedin.com/in/kuusall' },
+      {platform: 'Youtube', url: 'https://www.youtube.com/@kushal.adhikari.0'},
+      {platform: 'X', url:'https://x.com/___kushal'},
+      {platform: 'Facebook', url:'https://www.facebook.com/kuusalll/'}
     ],
   },
 };
