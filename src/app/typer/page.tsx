@@ -197,6 +197,22 @@ export default function TyperPage() {
     inputRef.current?.focus();
   }
 
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+
+    if (status === 'idle') {
+      setStatus('running');
+      setStartTime(Date.now());
+    }
+
+    if (value.length > text.length) {
+      finishTest();
+      return;
+    }
+
+    setTypedText(value);
+  };
+
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Tab') {
       e.preventDefault();
@@ -215,26 +231,6 @@ export default function TyperPage() {
       }
       return;
     }
-
-    if (e.key.length !== 1 && e.key !== 'Backspace') return;
-
-    if (status === 'idle') {
-      setStatus('running');
-      setStartTime(Date.now());
-    }
-
-    if (e.key === 'Backspace') {
-      setTypedText(prev => prev.slice(0, -1));
-      return;
-    }
-
-    const nextChar = text[typedText.length];
-    if (!nextChar) {
-      finishTest();
-      return;
-    }
-
-    setTypedText(prev => prev + e.key);
   };
 
   const finalWpm = calculateWpm(correct, elapsedTime || duration);
@@ -258,8 +254,10 @@ export default function TyperPage() {
       <main className="flex-1 flex flex-col justify-center items-center px-6 max-w-5xl mx-auto w-full pt-24">
         <input
           ref={inputRef}
-          className="absolute opacity-0 pointer-events-none"
+          className="absolute opacity-0"
           onKeyDown={handleKeyDown}
+          onChange={handleChange}
+          value={typedText}
           autoFocus
         />
         {status !== 'completed' ? (
