@@ -200,6 +200,8 @@ export default function TyperPage() {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
 
+    if (status === 'completed') return;
+
     if (status === 'idle') {
       setStatus('running');
       setStartTime(Date.now());
