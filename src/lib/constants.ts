@@ -17,8 +17,8 @@ export const siteConfig: SiteConfig = {
     { label: 'CONTACT', href: '#contact' },
   ],
   about: {
-    title: 'Working on AI, Purpose-Driven Products and Business Deveopment in Tech',
-    bio: 'Hello 👋, I am Kushal Adhikari a Computer Engineering Graduate specializing in AI/ML and product development. I am currently working on developing a mobile application for sports mainly Futsal called Maidan. I love learing and creating applications and am trying to develop business around it. I have been part of an award-winning solution recognized as star innovation called MindBridge, it was an inclusive learning app for dyslexic children and another app MindGuard also awarded for open innovation in digital health, it was a mental health platform for PTSD patients. Proud winner of ICT Awards 2025 Rising Star Innovation alongside various wins on multiple national hackathons. I am working on my research papers on Meadical Image and AI applications on Medical fields. I am a open source advocate and love using linux and have a passion for Science and Maths. Thank you for visiting my website.',
+    title: 'Working on AI, Purpose-Driven Products',
+    bio: 'I’m Kushal Adhikari, a Computer Engineering graduate focused on AI/ML engineering, intelligent applications, and product development. I build technology that applies AI to real-world problems, with experience across education and healthcare as well as recreational technology. I’m currently working on Maidan, a sports platform for futsal and recreational sports. My interests include applied AI research, medical imaging, software engineering, open source, and Linux. I’m particularly interested in taking ideas from research and engineering them into practical, scalable products.',
     skills: [
       {
         name: 'Languages',
